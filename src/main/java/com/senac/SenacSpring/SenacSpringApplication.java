@@ -18,5 +18,4 @@ public class SenacSpringApplication {
 	public String digaOla(@RequestParam(value = "meuNome", defaultValue = "Sem Nome") String name) {
 		return String.format("Olá %s!", name);
 	}
-
 }
