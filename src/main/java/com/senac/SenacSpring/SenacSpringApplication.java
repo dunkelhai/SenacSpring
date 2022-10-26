@@ -12,6 +12,7 @@ public class SenacSpringApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SenacSpringApplication.class, args);
+		
 	}
 
 	@GetMapping("/ola")
