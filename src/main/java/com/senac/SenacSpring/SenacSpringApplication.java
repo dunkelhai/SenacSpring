@@ -15,7 +15,8 @@ public class SenacSpringApplication {
 	}
 
 	@GetMapping("/ola")
-	public String digaOla(@RequestParam(value = "meuNome", defaultValue = "Sem Nome") String name) {
+	public String digaOla(@RequestParam(value = "meuNome",
+			defaultValue = "Sem Nome") String name) {
 		return String.format("Olá %s!", name);
 	}
 }
