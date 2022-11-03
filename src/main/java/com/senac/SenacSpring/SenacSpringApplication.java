@@ -26,13 +26,18 @@ public class SenacSpringApplication {
 			System.out.println("Acertou");
 		}
 		return pontos;
-
 	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(SenacSpringApplication.class, args);
 
 	}
+
+
+//	@GetMapping("/")
+//	public String inicio() {
+//		return "index";
+//	}
 
 	@GetMapping("/ola")
 	public String digaOla(@RequestParam(value = "meuNome",
@@ -43,7 +48,6 @@ public class SenacSpringApplication {
 	@GetMapping("/resultado")
 	public String resultadoPontos(){
 		Integer resultado = quiz();
-		String texto = resultado.toString();
-		return "Parabéns você fez " + texto + " pontos!";
+		return "Parabéns você fez " + resultado.toString() + " pontos!";
 	}
 }
