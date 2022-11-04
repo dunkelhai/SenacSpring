@@ -28,6 +28,25 @@ public class SenacSpringApplication {
 		return pontos;
 	}
 
+	public String fome(){
+		Scanner entrada = new Scanner(System.in);
+		String mensagem = null;
+		System.out.println("Fome?");
+		String fome = entrada.next();
+		System.out.println("Dinehiro?");
+		String dinheiro = entrada.next();
+
+		if (fome.equals("S") && dinheiro.equals("S")){
+			mensagem = "Então vá comer!";
+		} else if (fome.equals("N") && dinheiro.equals("S")) {
+			mensagem = "Invista seu dinheiro";
+		} else {
+			mensagem = "Nada";
+		}
+		return mensagem;
+	}
+
+
 	public static void main(String[] args) {
 		SpringApplication.run(SenacSpringApplication.class, args);
 
@@ -49,5 +68,10 @@ public class SenacSpringApplication {
 	public String resultadoPontos(){
 		Integer resultado = quiz();
 		return "Parabéns você fez " + resultado.toString() + " pontos!";
+	}
+
+	@GetMapping("/fome")
+	public String resultadoFome(){
+		return fome();
 	}
 }
