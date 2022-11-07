@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
-<html>
+<html xmlns:form="http://www.w3.org/1999/xhtml">
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <head>
     <title>Senac Spring</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -9,6 +10,7 @@
 <h1 class="h1">TESTE DE SPRING</h1>
 <p><a href="/ola">Diga olá!</a></p>
 
+
 <form action="/ola" method="GET" id="nameForm">
     <div>
         <label for="nameField">Como devemos te chamar?</label>
@@ -16,6 +18,31 @@
         <button>Me dê um oi!</button>
     </div>
 </form>
+
+<h3>Welcome, Enter The Employee Details</h3>
+<form:form method="POST"
+           action="/spring-mvc-xml/addEmployee" modelAttribute="employee">
+    <table>
+        <tr>
+            <td><form:label path="name">Name</form:label></td>
+            <td><form:input path="name"/></td>
+        </tr>
+        <tr>
+            <td><form:label path="id">Id</form:label></td>
+            <td><form:input path="id"/></td>
+        </tr>
+        <tr>
+            <td><form:label path="contactNumber">
+                Contact Number</form:label></td>
+            <td><form:input path="contactNumber"/></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"/></td>
+        </tr>
+    </table>
+</form:form>
+
+
 </body>
 <footer>
     <h1>TESTE DE SPRING</h1>
