@@ -1,4 +1,4 @@
-package com.senac.SenacSpring.model;
+package com.senac.SenacSpring;
 
 public class Greeting {
 

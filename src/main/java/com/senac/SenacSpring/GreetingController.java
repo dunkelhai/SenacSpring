@@ -1,6 +1,5 @@
-package com.senac.SenacSpring.controller;
+package com.senac.SenacSpring;
 
-import com.senac.SenacSpring.model.Greeting;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
