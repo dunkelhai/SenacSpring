@@ -51,7 +51,7 @@
 			<name>Spring Milestones</name>
 			<url>https://repo.spring.io/milestone</url>
 			<snapshots>
-				<enabled>false</enabled>
+				<enabled>true</enabled>
 			</snapshots>
 		</repository>
 		<repository>
@@ -81,5 +81,4 @@
 			</releases>
 		</pluginRepository>
 	</pluginRepositories>
-
 </project>
